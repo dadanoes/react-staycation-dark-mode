@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Light Theme (default) */
+:root {
+  --primary-color: #3252DF;
+  --secondary-color: #FF498B;
+  --text-color: #152C5B;
+  --card-bg: #ffffff;
+  --body-bg: #f5f6f8;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --card-hover: #f5f7ff;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --primary-color: #4d6aff;
+  --secondary-color: #ff6ba3;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --body-bg: #121212;
+  --shadow-color: rgba(255, 255, 255, 0.05);
+  --card-hover: #2c2c2c;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global transition for all themed elements */
+* {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
